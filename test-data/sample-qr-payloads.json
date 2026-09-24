@@ -1,0 +1,45 @@
+{
+  "description": "Ten valid ASTRA-101 Bingo QR fixtures. Paste an encoded value into the scanner's manual-entry field.",
+  "samples": [
+    {
+      "payload": { "v": 1, "id": "11111111-1111-4111-8111-111111111111", "name": "Ada Santos", "traits": ["github", "coffee", "hackathon"] },
+      "encoded": "BINGO:eyJ2IjoxLCJpZCI6IjExMTExMTExLTExMTEtNDExMS04MTExLTExMTExMTExMTExMSIsIm5hbWUiOiJBZGEgU2FudG9zIiwidHJhaXRzIjpbImdpdGh1YiIsImNvZmZlZSIsImhhY2thdGhvbiJdfQ"
+    },
+    {
+      "payload": { "v": 1, "id": "22222222-2222-4222-8222-222222222222", "name": "Ben Cruz", "traits": ["pet", "night-owl", "chatgpt"] },
+      "encoded": "BINGO:eyJ2IjoxLCJpZCI6IjIyMjIyMjIyLTIyMjItNDIyMi04MjIyLTIyMjIyMjIyMjIyMiIsIm5hbWUiOiJCZW4gQ3J1eiIsInRyYWl0cyI6WyJwZXQiLCJuaWdodC1vd2wiLCJjaGF0Z3B0Il19"
+    },
+    {
+      "payload": { "v": 1, "id": "33333333-3333-4333-8333-333333333333", "name": "Cara Reyes", "traits": ["ai-image-tool", "creative-hobby", "idea-to-build", "linkedin"] },
+      "encoded": "BINGO:eyJ2IjoxLCJpZCI6IjMzMzMzMzMzLTMzMzMtNDMzMy04MzMzLTMzMzMzMzMzMzMzMyIsIm5hbWUiOiJDYXJhIFJleWVzIiwidHJhaXRzIjpbImFpLWltYWdlLXRvb2wiLCJjcmVhdGl2ZS1ob2JieSIsImlkZWEtdG8tYnVpbGQiLCJsaW5rZWRpbiJdfQ"
+    },
+    {
+      "payload": { "v": 1, "id": "44444444-4444-4444-8444-444444444444", "name": "Diego Lim", "traits": ["another-course", "another-year", "astra-followers"] },
+      "encoded": "BINGO:eyJ2IjoxLCJpZCI6IjQ0NDQ0NDQ0LTQ0NDQtNDQ0NC04NDQ0LTQ0NDQ0NDQ0NDQ0NCIsIm5hbWUiOiJEaWVnbyBMaW0iLCJ0cmFpdHMiOlsiYW5vdGhlci1jb3Vyc2UiLCJhbm90aGVyLXllYXIiLCJhc3RyYS1mb2xsb3dlcnMiXX0"
+    },
+    {
+      "payload": { "v": 1, "id": "55555555-5555-4555-8555-555555555555", "name": "Ella Tan", "traits": ["ai-study", "ai-research", "debug-ai", "fav-ai-tool"] },
+      "encoded": "BINGO:eyJ2IjoxLCJpZCI6IjU1NTU1NTU1LTU1NTUtNDU1NS04NTU1LTU1NTU1NTU1NTU1NSIsIm5hbWUiOiJFbGxhIFRhbiIsInRyYWl0cyI6WyJhaS1zdHVkeSIsImFpLXJlc2VhcmNoIiwiZGVidWctYWkiLCJmYXYtYWktdG9vbCJdfQ"
+    },
+    {
+      "payload": { "v": 1, "id": "66666666-6666-4666-8666-666666666666", "name": "Finn Garcia", "traits": ["side-project", "vibecoding", "business-idea"] },
+      "encoded": "BINGO:eyJ2IjoxLCJpZCI6IjY2NjY2NjY2LTY2NjYtNDY2Ni04NjY2LTY2NjY2NjY2NjY2NiIsIm5hbWUiOiJGaW5uIEdhcmNpYSIsInRyYWl0cyI6WyJzaWRlLXByb2plY3QiLCJ2aWJlY29kaW5nIiwiYnVzaW5lc3MtaWRlYSJdfQ"
+    },
+    {
+      "payload": { "v": 1, "id": "77777777-7777-4777-8777-777777777777", "name": "Gia Ramos", "traits": ["coffee", "cram", "only-child", "knows-nobody"] },
+      "encoded": "BINGO:eyJ2IjoxLCJpZCI6Ijc3Nzc3Nzc3LTc3NzctNDc3Ny04Nzc3LTc3Nzc3Nzc3Nzc3NyIsIm5hbWUiOiJHaWEgUmFtb3MiLCJ0cmFpdHMiOlsiY29mZmVlIiwiY3JhbSIsIm9ubHktY2hpbGQiLCJrbm93cy1ub2JvZHkiXX0"
+    },
+    {
+      "payload": { "v": 1, "id": "88888888-8888-4888-8888-888888888888", "name": "Hana Lee", "traits": ["ai-event", "hackathon", "linkedin"] },
+      "encoded": "BINGO:eyJ2IjoxLCJpZCI6Ijg4ODg4ODg4LTg4ODgtNDg4OC04ODg4LTg4ODg4ODg4ODg4OCIsIm5hbWUiOiJIYW5hIExlZSIsInRyYWl0cyI6WyJhaS1ldmVudCIsImhhY2thdGhvbiIsImxpbmtlZGluIl19"
+    },
+    {
+      "payload": { "v": 1, "id": "99999999-9999-4999-8999-999999999999", "name": "Ivan Diaz", "traits": ["pet", "another-course", "github"] },
+      "encoded": "BINGO:eyJ2IjoxLCJpZCI6Ijk5OTk5OTk5LTk5OTktNDk5OS04OTk5LTk5OTk5OTk5OTk5OSIsIm5hbWUiOiJJdmFuIERpYXoiLCJ0cmFpdHMiOlsicGV0IiwiYW5vdGhlci1jb3Vyc2UiLCJnaXRodWIiXX0"
+    },
+    {
+      "payload": { "v": 1, "id": "aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaaa", "name": "Jules Wong", "traits": ["chatgpt", "ai-study", "fav-ai-tool", "creative-hobby", "idea-to-build"] },
+      "encoded": "BINGO:eyJ2IjoxLCJpZCI6ImFhYWFhYWFhLWFhYWEtNGFhYS04YWFhLWFhYWFhYWFhYWFhYSIsIm5hbWUiOiJKdWxlcyBXb25nIiwidHJhaXRzIjpbImNoYXRncHQiLCJhaS1zdHVkeSIsImZhdi1haS10b29sIiwiY3JlYXRpdmUtaG9iYnkiLCJpZGVhLXRvLWJ1aWxkIl19"
+    }
+  ]
+}
