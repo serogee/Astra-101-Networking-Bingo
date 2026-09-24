@@ -2,8 +2,11 @@ import react from '@vitejs/plugin-react'
 import { VitePWA } from 'vite-plugin-pwa'
 import { defineConfig } from 'vite'
 
+const base = '/Astra-101-Networking-Bingo/'
+
 // https://vite.dev/config/
 export default defineConfig({
+  base,
   plugins: [
     react(),
     VitePWA({
@@ -17,20 +20,20 @@ export default defineConfig({
         background_color: '#0A0E1A',
         display: 'standalone',
         orientation: 'portrait',
-        start_url: '/',
+        start_url: base,
         icons: [
           {
-            src: '/favicon.svg',
+            src: `${base}favicon.svg`,
             sizes: 'any',
             type: 'image/svg+xml',
           },
           {
-            src: '/pwa-192x192.svg',
+            src: `${base}pwa-192x192.svg`,
             sizes: '192x192',
             type: 'image/svg+xml',
           },
           {
-            src: '/pwa-192x192.svg',
+            src: `${base}pwa-192x192.svg`,
             sizes: '512x512',
             type: 'image/svg+xml',
             purpose: 'any maskable',
