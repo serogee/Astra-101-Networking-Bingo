@@ -1,0 +1,80 @@
+.settings-content {
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  padding: 24px;
+  max-width: 360px;
+  width: 100%;
+  animation: slideUp 0.2s ease-out;
+}
+
+.settings-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+/* Keep the X in the flex row — override the absolute positioning from dialog-close */
+.settings-header .dialog-close {
+  position: static;
+  flex-shrink: 0;
+}
+
+.settings-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--color-text);
+  margin: 0;
+}
+
+.settings-option {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  width: 100%;
+  padding: 14px;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: border-color 0.15s;
+  font-family: inherit;
+  text-align: left;
+  color: var(--color-text);
+  margin-bottom: 8px;
+}
+
+.settings-option svg {
+  margin-top: 2px;
+  flex-shrink: 0;
+  color: var(--color-accent);
+}
+
+.settings-option:hover {
+  border-color: var(--color-accent);
+}
+
+.settings-option-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.settings-option-label {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.settings-option-desc {
+  font-size: 0.75rem;
+  color: var(--color-text-secondary);
+}
+
+.settings-option-danger svg {
+  color: #ef4444;
+}
+
+.settings-option-danger:hover {
+  border-color: #ef4444;
+}

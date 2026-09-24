@@ -1,0 +1,164 @@
+.bingo-tile {
+  position: relative;
+  perspective: 600px;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: default;
+  font-family: inherit;
+  min-height: 0;
+}
+
+.bingo-tile.claimed {
+  cursor: pointer;
+}
+
+.tile-inner {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1.15;
+  transform-style: preserve-3d;
+  transition: transform 0.5s ease;
+}
+
+/* Face-down: show back */
+.bingo-tile.face-down .tile-inner {
+  transform: rotateY(0deg);
+}
+
+/* Claimed: flip to front */
+.bingo-tile.claimed .tile-inner {
+  transform: rotateY(180deg);
+}
+
+/* FREE SPACE: always show front, no animation */
+.bingo-tile.free-space .tile-inner {
+  transform: rotateY(180deg);
+  transition: none;
+}
+
+.tile-back,
+.tile-front {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  border-radius: 12px;
+  border: 1px solid var(--color-border);
+  background: var(--color-card);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 10px 6px 8px;
+  overflow: hidden;
+}
+
+.tile-back {
+  transform: rotateY(0deg);
+  color: var(--color-text-secondary);
+}
+
+.tile-front {
+  transform: rotateY(180deg);
+}
+
+.tile-front svg {
+  color: var(--color-accent);
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+}
+
+.tile-label {
+  font-size: 0.6rem;
+  font-weight: 500;
+  color: var(--color-text);
+  text-align: center;
+  line-height: 1.25;
+  word-break: break-word;
+  max-width: 100%;
+}
+
+.tile-provider {
+  font-size: 0.5rem;
+  color: var(--color-text-secondary);
+  text-align: center;
+  border-top: 1px solid var(--color-border);
+  padding-top: 4px;
+  margin-top: 2px;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* Claimed tile border highlight */
+.bingo-tile.claimed .tile-front {
+  border-color: var(--color-accent);
+}
+
+/* FREE SPACE styling */
+.bingo-tile.free-space .tile-front {
+  border-color: var(--color-accent);
+}
+
+.bingo-tile.free-space .tile-front svg {
+  color: var(--color-accent);
+}
+
+.bingo-tile.free-space .tile-label {
+  font-weight: 700;
+  font-size: 0.65rem;
+  color: var(--color-accent);
+}
+
+/* Winning line highlight */
+.bingo-tile.winning .tile-front {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 12px rgba(123, 140, 255, 0.3);
+}
+
+/* Larger tiles on bigger screens */
+@media (min-width: 420px) {
+  .tile-front svg {
+    width: 28px;
+    height: 28px;
+  }
+
+  .tile-label {
+    font-size: 0.65rem;
+  }
+
+  .tile-provider {
+    font-size: 0.55rem;
+  }
+
+  .tile-back svg {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+@media (min-width: 600px) {
+  .tile-front svg {
+    width: 32px;
+    height: 32px;
+  }
+
+  .tile-label {
+    font-size: 0.72rem;
+  }
+
+  .tile-provider {
+    font-size: 0.6rem;
+  }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .tile-inner {
+    transition: none;
+  }
+}

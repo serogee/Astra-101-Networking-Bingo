@@ -193,10 +193,11 @@ Use these labels verbatim. Each item has a stable ID and a Lucide icon:
 
 ### 5. Trait Picker Dialog
 
-- Shows scanned user's **name** prominently
-- Lists their **3–5 traits** as selectable cards with icons
-- Only traits matching **unclaimed tiles** on the scanner's board are **enabled**
-- Already-claimed traits show greyed-out "Already filled" label with reason
+- Shows scanned user's **name** prominently at the top
+- Lists their **3–5 traits** using the **same card design as bingo tiles**: Lucide icon on top, trait label below — no name field on these cards (since the provider's name is already shown above)
+- Selectable cards use the same rounded-rectangle, flat dark surface, subtle border styling as the board tiles
+- Only traits matching **unclaimed tiles** on the scanner's board are **enabled** (normal card appearance)
+- Already-claimed traits show greyed-out, reduced-opacity card with "Already filled" label
 - If **no traits are eligible**: all greyed out with explanatory message — person is **NOT** added to scan history (preserving future re-scan ability)
 - If person's **UUID already in scan history**: show "You've already scanned [Name]!" message — no second claim
 - Cancel button that changes no game state
@@ -222,18 +223,36 @@ Use these labels verbatim. Each item has a stable ID and a Lucide icon:
 
 ## Design system
 
-- **Theme**: Dark mode — deep navy/indigo backgrounds
-- **Surfaces**: Glassmorphism tiles with `rgba(30, 41, 82, 0.8)`, subtle borders, `backdrop-filter: blur`
-- **Colors**:
-  - Primary: Electric blue `#6C63FF` / `#818CF8`
-  - Accent: Cyan/teal for interactive highlights
-  - FREE SPACE: Golden gradient
-  - Claimed tiles: Subtle glow border
-  - Face-down tiles: Muted card-back pattern
+Follow the reference image closely — flat, clean, no gradients anywhere.
+
+- **Theme**: Dark mode — deep midnight navy background
+- **Colors** (flat solids, no gradients):
+  - Background: `#0A0E1A` (page body)
+  - Card surface: `#141B2E` (flat solid, slightly lighter than background)
+  - Card border: `#1E2A45` (subtle, 1px, rounded)
+  - Primary accent: Soft periwinkle blue `#7B8CFF` (icons, active states, selected borders)
+  - Text primary: `#FFFFFF`
+  - Text secondary: `#8892B0` ("Enter name" placeholders, helper text)
+  - FREE SPACE: Same card surface but with accent-colored star icon and slightly brighter border — no golden gradient
+  - Claimed tiles: Accent-colored border (`#7B8CFF`) to distinguish from unclaimed
+  - Face-down tiles: Standard card surface with `?` icon in muted text color
+  - Disabled/greyed: `opacity: 0.4` on the card
+- **Card design** (consistent across board tiles, trait picker, and setup selection):
+  - Rounded rectangles (`border-radius: 12px`)
+  - Generous inner padding (`16px–20px`)
+  - Grid gap between cards: `12px`
+  - Layout: icon centered on top → label centered below → name at bottom (board tiles only)
+  - Flat surface, no box-shadow, no blur, no glassmorphism
 - **Typography**: Bundled `Inter` — no CDN dependency
+- **Branding** (from reference):
+  - Header: "ASTRA 101" logo text with "LEARN / CONNECT / BUILD" nav links
+  - Title: Large bold "NETWORKING BINGO" with subtitle "Meet. Connect. Build."
+  - Badge: "Complete 5 in a row!" pill above the grid
+  - Footer: "ASTRA 101 | Networking Bingo"
+  - "HOW TO PLAY" section below the grid with numbered instructions
 - **Animations**:
   - Card flip: CSS 3D transforms (`transform-style: preserve-3d`, `backface-visibility: hidden`)
-  - Pulse/glow on claimed tiles
+  - Subtle border color transition on claimed tiles
   - Confetti burst on bingo
   - Smooth modal enter/exit transitions
   - All animations respect `prefers-reduced-motion: reduce`
